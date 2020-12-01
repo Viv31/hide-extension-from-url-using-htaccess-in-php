@@ -1,0 +1,6 @@
+#Rewrite URL with .htaccess to hide PHP extension
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ $1\.php
